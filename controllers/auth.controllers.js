@@ -72,34 +72,34 @@ exports.getAdmin = async (req, res) => {
     }
 }
 
-exports.register = async (req, res) => {
-    const admin = {
-        fname: 'system',
-        lname: 'admin',
-        email: 'admin@gmail.com',
-        password: '123456789',
-    }
-    try {
-        const hashedPass = await bcrypt.hash(admin.password, 10);
-        await Admin.create({
-            fname: admin.fname,
-            lname: admin.lname,
-            email: admin.email,
-            password: hashedPass, 
-            createdAt: Date.now,
-            updatedAt: Date.now
-        })
-        .then(() =>
-        {
-            res.status(200).json('admin successfully created')
-        })
-        .catch(err =>
-        {
-            res.status(409).json(err);
-        });
-    } catch (error) {
-        res.status(400).json(error);
-        console.log(error);
-    }
-}
+// exports.register = async (req, res) => {
+//     const admin = {
+//         fname: 'system',
+//         lname: 'admin',
+//         email: 'admin@gmail.com',
+//         password: '123456789',
+//     }
+//     try {
+//         const hashedPass = await bcrypt.hash(admin.password, 10);
+//         await Admin.create({
+//             fname: admin.fname,
+//             lname: admin.lname,
+//             email: admin.email,
+//             password: hashedPass, 
+//             createdAt: Date.now,
+//             updatedAt: Date.now
+//         })
+//         .then(() =>
+//         {
+//             res.status(200).json('admin successfully created')
+//         })
+//         .catch(err =>
+//         {
+//             res.status(409).json(err);
+//         });
+//     } catch (error) {
+//         res.status(400).json(error);
+//         console.log(error);
+//     }
+// }
 
