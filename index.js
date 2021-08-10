@@ -11,8 +11,8 @@ const boatRoutes = require('./routes/boat.routes.js');
 const messageRoutes = require('./routes/message.routes.js');
 const notificationRoutes = require('./routes/notification.routes.js');
 
-const privateKey = 'vE0Si1sFqcZMbCjpxOskz5ATUkwpfUCe5tnPEKxo3IM';
-const publicKey = 'BO-GvNLwWpunTELfq-yjZa7a6jwdnWTYdnRLgfAEUOZ9KBZqNnrPuqIfCi3VHr6xhzy62ZlWptODQajjU9oVrY0';
+// const privateKey = 'vE0Si1sFqcZMbCjpxOskz5ATUkwpfUCe5tnPEKxo3IM';
+// const publicKey = 'BO-GvNLwWpunTELfq-yjZa7a6jwdnWTYdnRLgfAEUOZ9KBZqNnrPuqIfCi3VHr6xhzy62ZlWptODQajjU9oVrY0';
 
 const app = express();
 
